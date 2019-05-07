@@ -4,6 +4,7 @@ module.exports = `
   <head>
   </head>
   <body>
+    test custom template
     <!--vue-ssr-outlet-->
   </body>
 </html>

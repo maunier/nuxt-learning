@@ -1,28 +1,20 @@
 <template>
 <div>
-  <h1>低版本页面测试</h1>
-  我是电视剧页面
+  <h1>低版本页面测试,我是电视剧页面</h1>
   
-  <script v-if="isLowBrowser" src="//stc.iqiyipic.com/js/lib/sea1.2.jenkins-feLibRelease-100.js"></script>
-  <script v-if="isLowBrowser" type="text/javascript">
+  <script v-if="$isLowBrowser" src="//stc.iqiyipic.com/js/lib/sea1.2.jenkins-feLibRelease-100.js"></script>
+  <script v-if="$isLowBrowser" type="text/javascript">
   if (window.Q) {
-    Q.projectName = "qiyiV2";
+    Q.projectName = 'qiyiV2';
     Q.PageInfo = this.pageInfo || {};
-    Q.load(this.jobName);
+    Q.load('lowBrowserIndex');
   }
   </script>
-  <!-- <Qiyiv2 job-name="lowBrowserIndex"></Qiyiv2> -->
 </div>
 </template>
 
 <script>
-  import Qiyiv2 from '~/components/Qiyiv2';
-
   export default {
-    components: {
-      Qiyiv2
-    },
-
     head () {
       return {
         link: [

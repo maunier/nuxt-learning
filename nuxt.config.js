@@ -20,7 +20,8 @@ module.exports = {
     bundleRenderer: {
       template,
       inject: false
-    }
+    },
+    injectScripts: false
   },
 
   /*

@@ -12,10 +12,11 @@ async function start() {
   // Instantiate nuxt.js
   const nuxt = new Nuxt(config)
 
-  const {
+  let {
     host = process.env.HOST || '127.0.0.1',
-    port = process.env.PORT || 3000
+    port = 8080 //process.env.PORT || 3000
   } = nuxt.options.server
+  port = 8080;
 
   // Build in development
   if (config.dev) {

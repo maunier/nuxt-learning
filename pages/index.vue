@@ -1,5 +1,6 @@
 <template>
   <section class="container">
+    <div :text="text">{{text}}</div>
     <button @click="test1++">add test1</button>: {{test1}}
     <div>
       <logo />
@@ -28,10 +29,24 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Vue from 'vue'
 
 export default {
   components: {
     Logo
+  },
+
+  data () {
+    console.log(Vue.prototype.$isServer)
+    return {
+      isServer: Vue.prototype.$isServer,
+      text: this.isServer ? 'isServer' : 'isClient'
+    }
+  },
+
+  created () {
+    this.text = this.isServer ? 'isServer' : 'isClient'
+    console.log('this.text:', this.isServer, this.text)
   },
 
   async asyncData () {

@@ -13,7 +13,7 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "koa": "^2.6.2",
-    "nuxt": "2.8.0",
+    "nuxt": "2.16.3",
     "woothee": "^1.10.0"
   },
   "devDependencies": {
